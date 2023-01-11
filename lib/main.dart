@@ -12,7 +12,7 @@ class BMICalculator extends StatelessWidget {
 
           colorScheme:
               ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(
-            secondary: Colors.blue,
+            secondary: Colors.green[900],
           ),
           scaffoldBackgroundColor: Colors.orange[50],
           textTheme:

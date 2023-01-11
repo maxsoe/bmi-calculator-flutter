@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+const double bottomContainerHeight = 80;
+const Color activeCardColour = Color(0xFFFFE0B2); //orange[100]
+const Color bottomContainerColour = Color(0xFF6002EE); //purple[500]
+// final Color bottomContainerColour = Theme.of(context).colorScheme.secondary;
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
@@ -8,6 +13,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
+    // final Color bottomContainerColour = Theme.of(context).colorScheme.secondary;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI CALCULATOR'),
@@ -22,12 +29,12 @@ class _InputPageState extends State<InputPage> {
                   children: [
                     Expanded(
                       child: ReusableCard(
-                        colour: Colors.orange[100],
+                        colour: activeCardColour,
                       ),
                     ),
                     Expanded(
                       child: ReusableCard(
-                        colour: Colors.orange[100],
+                        colour: activeCardColour,
                       ),
                     ),
                   ],
@@ -35,7 +42,7 @@ class _InputPageState extends State<InputPage> {
               ),
               Expanded(
                 child: ReusableCard(
-                  colour: Colors.orange[100],
+                  colour: activeCardColour,
                 ),
               ),
               Expanded(
@@ -44,17 +51,23 @@ class _InputPageState extends State<InputPage> {
                   children: [
                     Expanded(
                       child: ReusableCard(
-                        colour: Colors.orange[100],
+                        colour: activeCardColour,
                       ),
                     ),
                     Expanded(
                       child: ReusableCard(
-                        colour: Colors.orange[100],
+                        colour: activeCardColour,
                       ),
                     ),
                   ],
                 ),
               ),
+              Container(
+                color: bottomContainerColour,
+                margin: EdgeInsets.only(top: 16),
+                width: double.infinity,
+                height: bottomContainerHeight,
+              )
             ],
           ),
         ),
