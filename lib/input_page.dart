@@ -33,42 +33,36 @@ class _InputPageState extends State<InputPage> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: GestureDetector(
-                        // onTap: () => (debugPrint('Male card was tapped')),
-                        onTap: () {
+                      child: ReusableCard(
+                        onPress: () {
                           setState(() {
-                            // updateColour(Gender.male);
                             selectedGender = Gender.male;
+                            debugPrint('$selectedGender pressed');
                           });
                         },
-                        child: ReusableCard(
-                          // colour: maleCardColour,
-                          colour: selectedGender == Gender.male
-                              ? activeCardColour
-                              : inactiveCardColour,
-                          cardChild: GenderCardContents(
-                            icon: Icons.male,
-                            label: 'Male',
-                          ),
+                        colour: selectedGender == Gender.male
+                            ? activeCardColour
+                            : inactiveCardColour,
+                        cardChild: GenderCardContents(
+                          icon: Icons.male,
+                          label: 'Male',
                         ),
                       ),
                     ),
                     Expanded(
-                      child: GestureDetector(
-                        onTap: () {
+                      child: ReusableCard(
+                        onPress: () {
                           setState(() {
-                            // updateColour(Gender.female);
                             selectedGender = Gender.female;
+                            debugPrint('$selectedGender pressed');
                           });
                         },
-                        child: ReusableCard(
-                          colour: selectedGender == Gender.female
-                              ? activeCardColour
-                              : inactiveCardColour,
-                          cardChild: GenderCardContents(
-                            icon: Icons.female,
-                            label: 'Female',
-                          ),
+                        colour: selectedGender == Gender.female
+                            ? activeCardColour
+                            : inactiveCardColour,
+                        cardChild: GenderCardContents(
+                          icon: Icons.female,
+                          label: 'Female',
                         ),
                       ),
                     ),
