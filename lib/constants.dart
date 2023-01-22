@@ -9,6 +9,8 @@ const double kBottomContainerHeight = 80;
 const double kMinHeight = 30;
 const double kMaxHeight = 330;
 
+const double kSpacing = 8;
+
 const TextStyle kLabelTextStyle = TextStyle(fontSize: 24);
 const TextStyle kNumberTextStyle =
     TextStyle(fontSize: 48, fontWeight: FontWeight.w900);
