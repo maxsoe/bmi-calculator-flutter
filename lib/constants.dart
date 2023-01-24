@@ -14,3 +14,10 @@ const double kSpacing = 8;
 const TextStyle kLabelTextStyle = TextStyle(fontSize: 24);
 const TextStyle kNumberTextStyle =
     TextStyle(fontSize: 48, fontWeight: FontWeight.w900);
+const TextStyle kTitleTextStyle =
+    TextStyle(fontSize: 48, fontWeight: FontWeight.bold);
+const TextStyle kResultsTextStyle =
+    TextStyle(color: Colors.green, fontSize: 24, fontWeight: FontWeight.bold);
+const TextStyle kBMITextStyle =
+    TextStyle(fontSize: 96, fontWeight: FontWeight.bold);
+const TextStyle kbodyTextStyle = TextStyle(fontSize: 18);

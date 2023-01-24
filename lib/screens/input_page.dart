@@ -1,9 +1,9 @@
-import 'package:bmi_calculator/results_page.dart';
+import 'package:bmi_calculator/screens/results_page.dart';
 import 'package:flutter/material.dart';
-import 'gender_card_contents.dart';
-import 'reusable_card.dart';
-
-import 'constants.dart';
+import '../components/reusable_card.dart';
+import '../components/gender_card_contents.dart';
+import '../constants.dart';
+import '../components/round_icon_button.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -229,30 +229,6 @@ class _InputPageState extends State<InputPage> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({
-    @required this.icon,
-    @required this.onPressed,
-  });
-
-  final Icon icon;
-  final Function onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      elevation: 0,
-      onPressed: onPressed,
-      // shape: CircleBorder(side: BorderSide(color: Colors.black)),
-      shape: CircleBorder(),
-      constraints:
-          BoxConstraints.tightFor(width: kSpacing * 7, height: kSpacing * 7),
-      fillColor: Color.fromARGB(255, 241, 246, 204),
-      child: icon,
     );
   }
 }
