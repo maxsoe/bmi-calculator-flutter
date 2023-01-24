@@ -1,9 +1,11 @@
+import 'package:bmi_calculator/components/calculator_brain.dart';
 import 'package:bmi_calculator/screens/results_page.dart';
 import 'package:flutter/material.dart';
 import '../components/reusable_card.dart';
 import '../components/gender_card_contents.dart';
 import '../constants.dart';
 import '../components/round_icon_button.dart';
+import 'package:bmi_calculator/main.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -212,10 +214,17 @@ class _InputPageState extends State<InputPage> {
               Container(
                 child: ElevatedButton(
                   onPressed: () {
+                    CalculatorBrain calc =
+                        CalculatorBrain(height: height, weight: weight);
                     // Navigator.pushNamed(context, '/results');
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ResultsPage()),
+                      MaterialPageRoute(
+                          builder: (context) => ResultsPage(
+                                bmiInterpretation: calc.getInterpretation(),
+                                bmiResult: calc.getResults(),
+                                resultText: calc.calculateBMI(),
+                              )),
                     );
                   },
                   child: Text('Calculate'),

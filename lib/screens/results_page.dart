@@ -3,6 +3,16 @@ import '/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {
+  ResultsPage({
+    @required this.bmiResult,
+    @required this.resultText,
+    @required this.bmiInterpretation,
+  });
+
+  final String bmiResult;
+  final String resultText;
+  final String bmiInterpretation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,15 +41,15 @@ class ResultsPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'overweight/normal/underweight',
+                        bmiResult ?? 'result unknown',
                         style: kResultsTextStyle,
                       ),
                       Text(
-                        '22',
+                        resultText ?? "00",
                         style: kBMITextStyle,
                       ),
                       Text(
-                        'interpretation',
+                        bmiInterpretation ?? 'interpretation unknown',
                         style: kbodyTextStyle,
                         textAlign: TextAlign.center,
                       )
